@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EDED63DF-FCE5-4846-8936-FC076021B6B6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Tiny_Explorers</RootNamespace>
+    <AssemblyName>Tiny Explorers</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBLayer\DBLayer.cs" />
+    <Compile Include="FrmBiljeske.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBiljeske.Designer.cs">
+      <DependentUpon>FrmBiljeske.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDodajZaposlenika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDodajZaposlenika.Designer.cs">
+      <DependentUpon>FrmDodajZaposlenika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIzbrisiZaposlenika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIzbrisiZaposlenika.Designer.cs">
+      <DependentUpon>FrmIzbrisiZaposlenika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIzvjestajDijete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIzvjestajDijete.Designer.cs">
+      <DependentUpon>FrmIzvjestajDijete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIzvjestajSkupina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIzvjestajSkupina.Designer.cs">
+      <DependentUpon>FrmIzvjestajSkupina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIzvjestajZaposlenik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIzvjestajZaposlenik.Designer.cs">
+      <DependentUpon>FrmIzvjestajZaposlenik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIzvještajEvidencijaDolaska.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIzvještajEvidencijaDolaska.Designer.cs">
+      <DependentUpon>FrmIzvještajEvidencijaDolaska.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrikaziDetaljeAktivnosti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrikaziDetaljeAktivnosti.Designer.cs">
+      <DependentUpon>FrmPrikaziDetaljeAktivnosti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrikaziDetaljeAktivnostiOdgojiteljica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrikaziDetaljeAktivnostiOdgojiteljica.Designer.cs">
+      <DependentUpon>FrmPrikaziDetaljeAktivnostiOdgojiteljica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrikaziDetaljeDjeteta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrikaziDetaljeDjeteta.Designer.cs">
+      <DependentUpon>FrmPrikaziDetaljeDjeteta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrikaziDetaljeRacuna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrikaziDetaljeRacuna.Designer.cs">
+      <DependentUpon>FrmPrikaziDetaljeRacuna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRaspored.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRaspored.Designer.cs">
+      <DependentUpon>FrmRaspored.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUrediZaposlenika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUrediZaposlenika.Designer.cs">
+      <DependentUpon>FrmUrediZaposlenika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmZaposlenici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmZaposlenici.Designer.cs">
+      <DependentUpon>FrmZaposlenici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAktivnostiOdgojiteljica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAktivnostiOdgojiteljica.Designer.cs">
+      <DependentUpon>FrmAktivnostiOdgojiteljica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAktivnostiRavnateljica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAktivnostiRavnateljica.Designer.cs">
+      <DependentUpon>FrmAktivnostiRavnateljica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDjeca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDjeca.Designer.cs">
+      <DependentUpon>FrmDjeca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDodajAktivnost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDodajAktivnost.Designer.cs">
+      <DependentUpon>FrmDodajAktivnost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDodajDijete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDodajDijete.Designer.cs">
+      <DependentUpon>FrmDodajDijete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDodajSkupinu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDodajSkupinu.Designer.cs">
+      <DependentUpon>FrmDodajSkupinu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDodajEvidencijaDolaska.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDodajEvidencijaDolaska.Designer.cs">
+      <DependentUpon>FrmDodajEvidencijaDolaska.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEvidencijaDolaska.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEvidencijaDolaska.Designer.cs">
+      <DependentUpon>FrmEvidencijaDolaska.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFiltriranjeDjece.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFiltriranjeDjece.Designer.cs">
+      <DependentUpon>FrmFiltriranjeDjece.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGenerirajRacun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGenerirajRacun.Designer.cs">
+      <DependentUpon>FrmGenerirajRacun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIzbrisiAktivnost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIzbrisiAktivnost.Designer.cs">
+      <DependentUpon>FrmIzbrisiAktivnost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIzbrisiDijete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIzbrisiDijete.Designer.cs">
+      <DependentUpon>FrmIzbrisiDijete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIzbrisiSkupinu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIzbrisiSkupinu.Designer.cs">
+      <DependentUpon>FrmIzbrisiSkupinu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMeniOdgojiteljice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMeniOdgojiteljice.Designer.cs">
+      <DependentUpon>FrmMeniOdgojiteljice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMeniRavnateljice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMeniRavnateljice.Designer.cs">
+      <DependentUpon>FrmMeniRavnateljice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmObavijesti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmObavijesti.Designer.cs">
+      <DependentUpon>FrmObavijesti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPocetna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPocetna.Designer.cs">
+      <DependentUpon>FrmPocetna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPovijestObavijesti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPovijestObavijesti.Designer.cs">
+      <DependentUpon>FrmPovijestObavijesti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrikazSvihRacuna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrikazSvihRacuna.Designer.cs">
+      <DependentUpon>FrmPrikazSvihRacuna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSkupine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSkupine.Designer.cs">
+      <DependentUpon>FrmSkupine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUrediAktivnost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUrediAktivnost.Designer.cs">
+      <DependentUpon>FrmUrediAktivnost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUrediDijete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUrediDijete.Designer.cs">
+      <DependentUpon>FrmUrediDijete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUrediSkupinu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUrediSkupinu.Designer.cs">
+      <DependentUpon>FrmUrediSkupinu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\SortableBindingList.cs" />
+    <Compile Include="Models\Biljeska.cs" />
+    <Compile Include="Models\Dijete.cs" />
+    <Compile Include="Models\DijeteIzvjestaj.cs" />
+    <Compile Include="Models\EvidencijaDolaska.cs" />
+    <Compile Include="Models\EvidencijaDolaskaIzvjestaj.cs" />
+    <Compile Include="Models\Obavijest.cs" />
+    <Compile Include="Models\Plan_aktivnosti.cs" />
+    <Compile Include="Models\Racun.cs" />
+    <Compile Include="Models\Raspored.cs" />
+    <Compile Include="Models\Roditelj.cs" />
+    <Compile Include="Models\Skupina.cs" />
+    <Compile Include="Models\SkupinaIzvjestaj.cs" />
+    <Compile Include="Models\Zaposlenik.cs" />
+    <Compile Include="Models\ZaposlenikIzvjestaj.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AktivnostiRepository.cs" />
+    <Compile Include="Repositories\BiljeskaRepository.cs" />
+    <Compile Include="Repositories\DjecaRepository.cs" />
+    <Compile Include="Repositories\EvidencijeDolaskaRepository.cs" />
+    <Compile Include="Repositories\RasporedRepository.cs" />
+    <Compile Include="Repositories\ObavijestiRepository.cs" />
+    <Compile Include="Repositories\RacuniRepository.cs" />
+    <Compile Include="Repositories\RoditeljRepository.cs" />
+    <Compile Include="Repositories\SkupineRepository.cs" />
+    <Compile Include="Repositories\ZaposleniciRepository.cs" />
+    <EmbeddedResource Include="FrmBiljeske.resx">
+      <DependentUpon>FrmBiljeske.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIzvjestajDijete.resx">
+      <DependentUpon>FrmIzvjestajDijete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIzvjestajSkupina.resx">
+      <DependentUpon>FrmIzvjestajSkupina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIzvjestajZaposlenik.resx">
+      <DependentUpon>FrmIzvjestajZaposlenik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIzvještajEvidencijaDolaska.resx">
+      <DependentUpon>FrmIzvještajEvidencijaDolaska.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDodajZaposlenika.resx">
+      <DependentUpon>FrmDodajZaposlenika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIzbrisiZaposlenika.resx">
+      <DependentUpon>FrmIzbrisiZaposlenika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrikaziDetaljeAktivnosti.resx">
+      <DependentUpon>FrmPrikaziDetaljeAktivnosti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrikaziDetaljeAktivnostiOdgojiteljica.resx">
+      <DependentUpon>FrmPrikaziDetaljeAktivnostiOdgojiteljica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrikaziDetaljeDjeteta.resx">
+      <DependentUpon>FrmPrikaziDetaljeDjeteta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrikaziDetaljeRacuna.resx">
+      <DependentUpon>FrmPrikaziDetaljeRacuna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRaspored.resx">
+      <DependentUpon>FrmRaspored.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUrediZaposlenika.resx">
+      <DependentUpon>FrmUrediZaposlenika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmZaposlenici.resx">
+      <DependentUpon>FrmZaposlenici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAktivnostiOdgojiteljica.resx">
+      <DependentUpon>FrmAktivnostiOdgojiteljica.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAktivnostiRavnateljica.resx">
+      <DependentUpon>FrmAktivnostiRavnateljica.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDjeca.resx">
+      <DependentUpon>FrmDjeca.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDodajAktivnost.resx">
+      <DependentUpon>FrmDodajAktivnost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDodajDijete.resx">
+      <DependentUpon>FrmDodajDijete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDodajSkupinu.resx">
+      <DependentUpon>FrmDodajSkupinu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDodajEvidencijaDolaska.resx">
+      <DependentUpon>FrmDodajEvidencijaDolaska.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEvidencijaDolaska.resx">
+      <DependentUpon>FrmEvidencijaDolaska.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFiltriranjeDjece.resx">
+      <DependentUpon>FrmFiltriranjeDjece.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGenerirajRacun.resx">
+      <DependentUpon>FrmGenerirajRacun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIzbrisiAktivnost.resx">
+      <DependentUpon>FrmIzbrisiAktivnost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIzbrisiDijete.resx">
+      <DependentUpon>FrmIzbrisiDijete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIzbrisiSkupinu.resx">
+      <DependentUpon>FrmIzbrisiSkupinu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMeniOdgojiteljice.resx">
+      <DependentUpon>FrmMeniOdgojiteljice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMeniRavnateljice.resx">
+      <DependentUpon>FrmMeniRavnateljice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmObavijesti.resx">
+      <DependentUpon>FrmObavijesti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPocetna.resx">
+      <DependentUpon>FrmPocetna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPovijestObavijesti.resx">
+      <DependentUpon>FrmPovijestObavijesti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrikazSvihRacuna.resx">
+      <DependentUpon>FrmPrikazSvihRacuna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSkupine.resx">
+      <DependentUpon>FrmSkupine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUrediAktivnost.resx">
+      <DependentUpon>FrmUrediAktivnost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUrediDijete.resx">
+      <DependentUpon>FrmUrediDijete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUrediSkupinu.resx">
+      <DependentUpon>FrmUrediSkupinu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\note_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-kids.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-activities.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kids.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group-of-people.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teddy-bear.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
